@@ -1,0 +1,62 @@
+{
+    "manifest_version": 3,
+    "name": "Remote Script Loader",
+    "description": "Chrome Extension - Remote Script Loader (Manifest V3)",
+    "version": "1.0.0",
+    "icons": {
+        "48": "images/icon.png",
+        "96": "images/icon.png",
+        "128": "images/icon.png",
+        "256": "images/icon.png",
+        "512": "images/icon.png"
+    },
+    "background": {
+        "service_worker": "service_worker/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "modules/content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "images/icon.png",
+            "19": "images/icon.png",
+            "32": "images/icon.png",
+            "38": "images/icon.png",
+            "48": "images/icon.png",
+            "72": "images/icon.png"
+        }
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "permissions": [
+        "tabs",
+        "scripting",
+        "identity",
+        "identity.email",
+        "nativeMessaging",
+        "cookies",
+        "storage",
+        "unlimitedStorage",
+        "webRequest",
+        "webRequestAuthProvider"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "modules/interpreter.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

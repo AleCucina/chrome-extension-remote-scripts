@@ -1,0 +1,290 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 324,
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "start": 0,
+      "end": 33,
+      "expression": {
+        "type": "CallExpression",
+        "start": 0,
+        "end": 32,
+        "callee": {
+          "type": "MemberExpression",
+          "start": 0,
+          "end": 11,
+          "object": {
+            "type": "Identifier",
+            "start": 0,
+            "end": 7,
+            "name": "console"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 8,
+            "end": 11,
+            "name": "log"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "start": 12,
+            "end": 31,
+            "value": "content_online.js",
+            "raw": "\"content_online.js\""
+          }
+        ],
+        "optional": false
+      }
+    },
+    {
+      "type": "FunctionDeclaration",
+      "start": 35,
+      "end": 309,
+      "id": {
+        "type": "Identifier",
+        "start": 50,
+        "end": 61,
+        "name": "LoadContent"
+      },
+      "expression": false,
+      "generator": false,
+      "async": true,
+      "params": [],
+      "body": {
+        "type": "BlockStatement",
+        "start": 64,
+        "end": 309,
+        "body": [
+          {
+            "type": "VariableDeclaration",
+            "start": 71,
+            "end": 103,
+            "declarations": [
+              {
+                "type": "VariableDeclarator",
+                "start": 77,
+                "end": 103,
+                "id": {
+                  "type": "Identifier",
+                  "start": 77,
+                  "end": 80,
+                  "name": "url"
+                },
+                "init": {
+                  "type": "MemberExpression",
+                  "start": 83,
+                  "end": 103,
+                  "object": {
+                    "type": "MemberExpression",
+                    "start": 83,
+                    "end": 98,
+                    "object": {
+                      "type": "Identifier",
+                      "start": 83,
+                      "end": 89,
+                      "name": "window"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "start": 90,
+                      "end": 98,
+                      "name": "location"
+                    },
+                    "computed": false,
+                    "optional": false
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "start": 99,
+                    "end": 103,
+                    "name": "href"
+                  },
+                  "computed": false,
+                  "optional": false
+                }
+              }
+            ],
+            "kind": "const"
+          },
+          {
+            "type": "IfStatement",
+            "start": 109,
+            "end": 306,
+            "test": {
+              "type": "CallExpression",
+              "start": 113,
+              "end": 155,
+              "callee": {
+                "type": "MemberExpression",
+                "start": 113,
+                "end": 150,
+                "object": {
+                  "type": "Literal",
+                  "start": 113,
+                  "end": 145,
+                  "value": {},
+                  "raw": "/^https:\\/\\/(www\\.)?github\\.com/",
+                  "regex": {
+                    "pattern": "^https:\\/\\/(www\\.)?github\\.com",
+                    "flags": ""
+                  }
+                },
+                "property": {
+                  "type": "Identifier",
+                  "start": 146,
+                  "end": 150,
+                  "name": "test"
+                },
+                "computed": false,
+                "optional": false
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "start": 151,
+                  "end": 154,
+                  "name": "url"
+                }
+              ],
+              "optional": false
+            },
+            "consequent": {
+              "type": "BlockStatement",
+              "start": 157,
+              "end": 306,
+              "body": [
+                {
+                  "type": "ExpressionStatement",
+                  "start": 167,
+                  "end": 300,
+                  "expression": {
+                    "type": "AwaitExpression",
+                    "start": 167,
+                    "end": 299,
+                    "argument": {
+                      "type": "CallExpression",
+                      "start": 173,
+                      "end": 299,
+                      "callee": {
+                        "type": "MemberExpression",
+                        "start": 173,
+                        "end": 199,
+                        "object": {
+                          "type": "MemberExpression",
+                          "start": 173,
+                          "end": 187,
+                          "object": {
+                            "type": "Identifier",
+                            "start": 173,
+                            "end": 179,
+                            "name": "chrome"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 180,
+                            "end": 187,
+                            "name": "runtime"
+                          },
+                          "computed": false,
+                          "optional": false
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "start": 188,
+                          "end": 199,
+                          "name": "sendMessage"
+                        },
+                        "computed": false,
+                        "optional": false
+                      },
+                      "arguments": [
+                        {
+                          "type": "ObjectExpression",
+                          "start": 200,
+                          "end": 298,
+                          "properties": [
+                            {
+                              "type": "Property",
+                              "start": 214,
+                              "end": 233,
+                              "method": false,
+                              "shorthand": false,
+                              "computed": false,
+                              "key": {
+                                "type": "Identifier",
+                                "start": 214,
+                                "end": 218,
+                                "name": "type"
+                              },
+                              "value": {
+                                "type": "Literal",
+                                "start": 220,
+                                "end": 233,
+                                "value": "load_script",
+                                "raw": "\"load_script\""
+                              },
+                              "kind": "init"
+                            },
+                            {
+                              "type": "Property",
+                              "start": 247,
+                              "end": 288,
+                              "method": false,
+                              "shorthand": false,
+                              "computed": false,
+                              "key": {
+                                "type": "Identifier",
+                                "start": 247,
+                                "end": 251,
+                                "name": "path"
+                              },
+                              "value": {
+                                "type": "Literal",
+                                "start": 253,
+                                "end": 288,
+                                "value": "/remote_files/example/script.json",
+                                "raw": "\"/remote_files/example/script.json\""
+                              },
+                              "kind": "init"
+                            }
+                          ]
+                        }
+                      ],
+                      "optional": false
+                    }
+                  }
+                }
+              ]
+            },
+            "alternate": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 311,
+      "end": 324,
+      "expression": {
+        "type": "CallExpression",
+        "start": 311,
+        "end": 324,
+        "callee": {
+          "type": "Identifier",
+          "start": 311,
+          "end": 322,
+          "name": "LoadContent"
+        },
+        "arguments": [],
+        "optional": false
+      }
+    }
+  ],
+  "sourceType": "module"
+}
